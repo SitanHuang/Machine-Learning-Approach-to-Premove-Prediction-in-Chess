@@ -1,0 +1,10 @@
+__pycache__
+.vscode
+artifacts
+*.pgn
+*.pt
+*.npz
+*.txt
+*.m
+*.png
+*.pdf
