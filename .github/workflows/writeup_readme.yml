@@ -7,7 +7,7 @@ on:
     branches: 
       - 'master'
     paths:
-      - 'writeup.pdf'
+      - 'Report.pdf'
       - '.README.md'
       - '.github/workflows/writeup_readme.yml'
 
@@ -28,7 +28,7 @@ jobs:
     - name: Convert Writeup to Images
       uses: jruipinto/ImageMagick-action@v1
       with:
-        command: convert -density ${{env.DPI}} -trim -colorspace sRGB -alpha remove writeup.pdf -quality ${{env.QUALITY}} output-%03d.jpg
+        command: convert -density ${{env.DPI}} -trim -colorspace sRGB -alpha remove Report.pdf -quality ${{env.QUALITY}} output-%03d.jpg
 
     ## COMMIT THEM TO A ORPHAN BRANCH
     - name: Commit images to orphan branch
